@@ -8313,7 +8313,7 @@ button.bg-dark:focus {
 
 .pr-5,
 .px-5 {
-  padding-right: 3rem !important;
+  padding-right: 2.5rem !important;
 }
 
 .pb-5,
@@ -8323,7 +8323,7 @@ button.bg-dark:focus {
 
 .pl-5,
 .px-5 {
-  padding-left: 3rem !important;
+  padding-left: 2.5rem !important;
 }
 
 .m-n1 {
@@ -10406,7 +10406,7 @@ h6,
   left: 50%;
   border-radius: 4px;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s ease-out;
 }
 
 .portfolio-item:hover .portfolio-btn {
@@ -10475,6 +10475,9 @@ h6,
 #section-with-border {
   border-top: 1px solid white; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
 }
+#padding-about {
+  padding-bottom: 2rem !important; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
+}
 .about-content {
   color: #bbbbbb;
 }
@@ -10508,4 +10511,20 @@ h6,
 
 .theme-toggle-btn:active {
   transform: scale(0.95); /* Khi nhấn sẽ thu nhỏ */
+}
+
+.portfolio-image {
+  height: 200px; /* Thiết lập chiều cao cố định */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo và cắt cho vừa */
+  border: 1px solid white; /* Thêm viền màu đen */
+}
+
+.portfolio-item.first {
+  padding-right: 20px !important; /* Thêm padding-right 20px */
+  padding-left: 20px !important; /* Thêm padding-left 20px */
+}
+
+.portfolio-item.second {
+  padding-right: 20px !important; /* Thêm padding-right 20px */
+  padding-left: 20px !important; /* Thêm padding-left 20px */
 }
