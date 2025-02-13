@@ -2,13 +2,17 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import * as path from 'path';
+import * as cookieParser from 'cookie-parser';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-
+  app.use(cookieParser()); // Sử dụng cookie-parser
+  app.useStaticAssets(path.join(__dirname, '..', 'svelte-frontend', 'public'), {
+    prefix: '/svelte-frontend', // Thêm prefix để xác định đường dẫn
+  });
   // Cấu hình EJS làm view engine
   app.setViewEngine('ejs');
-  
+
   // Đặt thư mục chứa các view (EJS templates)
   app.setBaseViewsDir(path.join(__dirname, '..', 'views'));
 

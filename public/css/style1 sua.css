@@ -69,9 +69,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #555;
+  color: #fff;
   text-align: left;
-  background-color: #ffffff;
+  background-color: #222222;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
@@ -390,7 +390,7 @@ h6,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #555;
+  color: #757575;
 }
 
 h1,
@@ -8118,7 +8118,7 @@ button.bg-dark:focus {
 
 .mr-4,
 .mx-4 {
-  margin-right: 2rem !important;
+  margin-right: 1.5rem !important;
 }
 
 .mb-4,
@@ -8276,27 +8276,27 @@ button.bg-dark:focus {
 }
 
 .p-5 {
-  padding: 2rem !important;
+  padding: 3rem !important;
 }
 
 .pt-5,
 .py-5 {
-  padding-top: 2rem !important;
+  padding-top: 3rem !important;
 }
 
 .pr-5,
 .px-5 {
-  padding-right: 2rem !important;
+  padding-right: 3rem !important;
 }
 
 .pb-5,
 .py-5 {
-  padding-bottom: 2rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .pl-5,
 .px-5 {
-  padding-left: 2rem !important;
+  padding-left: 3rem !important;
 }
 
 .m-n1 {
@@ -9957,9 +9957,6 @@ button.bg-dark:focus {
 .text-white {
   color: #fff !important;
 }
-.text-white1 {
-  color: #fff !important;
-}
 
 .text-primary {
   color: #ffb400 !important;
@@ -9971,7 +9968,7 @@ a.text-primary:focus {
 }
 
 .text-secondary {
-  color: #555 !important;
+  color: #fff !important;
 }
 
 a.text-secondary:hover,
@@ -10426,62 +10423,4 @@ h6,
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.navbar-title {
-  color: #343a40;
-}
-
-#about {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
-}
-#qualification {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
-}
-#skill {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
-}
-#portfolio {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
-}
-
-#section-with-border {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
-}
-.section-with-border {
-  border-top: 1px solid black;
-}
-.about-label {
-  color: #777;
-}
-
-.color-444 {
-  color: #444;
-}
-
-.text-stroke {
-  -webkit-text-stroke: 1px #111;
-}
-
-.theme-toggle-btn {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 18px;
-  border: none;
-  background-color: #343a40; /* Màu nền sáng */
-  color: #333; /* Màu chữ tối */
-  border-radius: 25px;
-  cursor: pointer;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-
-.theme-toggle-btn:hover {
-  background-color: #f8f9fa; /* Màu nền tối khi hover */
-  color: #fff; /* Màu chữ sáng khi hover */
-}
-
-.theme-toggle-btn:active {
-  transform: scale(0.95); /* Khi nhấn sẽ thu nhỏ */
 }

@@ -69,9 +69,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #555;
+  color: #fff;
   text-align: left;
-  background-color: #ffffff;
+  background-color: #111111;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
@@ -375,6 +375,34 @@ template {
   display: none !important;
 }
 
+/* h1,
+h2,
+h4,
+.h1,
+.h2,
+.h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #757575;
+}
+h3,
+.h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+}
+h5,
+h6,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #bbbbbb;
+} */
+
 h1,
 h2,
 h3,
@@ -390,9 +418,8 @@ h6,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #555;
+  color: #fff;
 }
-
 h1,
 .h1 {
   font-size: 2.5rem;
@@ -6845,7 +6872,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #ffffff !important;
+  background-color: #111 !important;
 }
 
 a.bg-light:hover,
@@ -8118,7 +8145,7 @@ button.bg-dark:focus {
 
 .mr-4,
 .mx-4 {
-  margin-right: 2rem !important;
+  margin-right: 1.5rem !important;
 }
 
 .mb-4,
@@ -8276,7 +8303,7 @@ button.bg-dark:focus {
 }
 
 .p-5 {
-  padding: 2rem !important;
+  padding: 3rem !important;
 }
 
 .pt-5,
@@ -8286,7 +8313,7 @@ button.bg-dark:focus {
 
 .pr-5,
 .px-5 {
-  padding-right: 2rem !important;
+  padding-right: 3rem !important;
 }
 
 .pb-5,
@@ -8296,7 +8323,7 @@ button.bg-dark:focus {
 
 .pl-5,
 .px-5 {
-  padding-left: 2rem !important;
+  padding-left: 3rem !important;
 }
 
 .m-n1 {
@@ -9955,7 +9982,7 @@ button.bg-dark:focus {
 }
 
 .text-white {
-  color: #fff !important;
+  color: #111 !important;
 }
 .text-white1 {
   color: #fff !important;
@@ -9971,7 +9998,7 @@ a.text-primary:focus {
 }
 
 .text-secondary {
-  color: #555 !important;
+  color: #fff !important;
 }
 
 a.text-secondary:hover,
@@ -10241,7 +10268,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link {
   padding: 25px 10px;
-  color: #343a40;
+  color: #fff;
   font-weight: 500;
   outline: none;
 }
@@ -10429,38 +10456,35 @@ h6,
 }
 
 .navbar-title {
-  color: #343a40;
+  color: #fff;
 }
 
 #about {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
+  border-top: 1px solid white; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
 }
 #qualification {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
+  border-top: 1px solid white; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
 }
 #skill {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
+  border-top: 1px solid white; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
 }
 #portfolio {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
+  border-top: 1px solid white; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
 }
 
 #section-with-border {
-  border-top: 1px solid black; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
+  border-top: 1px solid white; /* Đoạn gạch trên cùng màu trắng với độ dày 5px */
 }
-.section-with-border {
-  border-top: 1px solid black;
-}
-.about-label {
-  color: #777;
+.about-content {
+  color: #bbbbbb;
 }
 
-.color-444 {
-  color: #444;
+.about-label {
+  color: #bbbbbb;
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1px #111;
+  -webkit-text-stroke: 1px #fff;
 }
 
 .theme-toggle-btn {
@@ -10468,7 +10492,7 @@ h6,
   margin: 10px;
   font-size: 18px;
   border: none;
-  background-color: #343a40; /* Màu nền sáng */
+  background-color: #f8f9fa; /* Màu nền sáng */
   color: #333; /* Màu chữ tối */
   border-radius: 25px;
   cursor: pointer;
@@ -10478,7 +10502,7 @@ h6,
 }
 
 .theme-toggle-btn:hover {
-  background-color: #f8f9fa; /* Màu nền tối khi hover */
+  background-color: #343a40; /* Màu nền tối khi hover */
   color: #fff; /* Màu chữ sáng khi hover */
 }
 
