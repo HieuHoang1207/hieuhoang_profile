@@ -164,8 +164,10 @@
         </div>
         <div id="background-blur"></div>
         <div id="countdown-timer"></div>
-        <div id="special-text">Hết rồi iu nhiềuu nắmmmm ❤️</div>
+        <div id="special-text">Hết rồi, iu nhiềuu nắmmmm ❤️</div>
         <img id="special-image" src="" alt="Special Image">
+
+
 
         <audio id="background-music" loop>
             <source src="/img/sound.mp4" type="audio/mp4">
@@ -216,7 +218,7 @@
                     const countdownTimer = document.getElementById("countdown-timer");
                     countdownTimer.style.display = "block";
     
-                    let count = 20;
+                    let count = 5;
                     const countdownInterval = setInterval(() => {
                         countdownTimer.textContent = count;
                         if (count === 0) {
@@ -243,7 +245,23 @@
                                     specialImage.src = "img/hieu2.jpg";
                                     setTimeout(() => {
                                         specialImage.src = "img/hieu3.jpg";
+
+                                        // Hiển thị dòng chữ ngay sau khi đổi ảnh
+                                        setTimeout(() => {
+                                            specialImage.style.display = "none";
+                                            specialText.innerHTML = "Giờ hết thật rồi nè, iu nhiềuu nắmmmm ❤️<br>Click để say yêu em 🌌";
+
+                                            
+                                            specialText.style.display = "block";
+    specialText.style.visibility = "visible";
+    specialText.style.opacity = "1";
+                                            document.addEventListener("click", () => {
+        window.location.href = "https://www.facebook.com/messages/t/hieufall";
+    });
+                                        }, 2000);
                                     }, 2000);
+
+
                                 }, 2000);
                             }, 2500);
                         }
