@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import * as path from 'path';
 import * as cookieParser from 'cookie-parser';
+import { join } from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -18,6 +19,11 @@ async function bootstrap() {
 
   // Đặt thư mục static (cho các file như CSS, JS)
   app.useStaticAssets(path.join(__dirname, '..', 'public'));
+
+  // Cho phép phục vụ file tĩnh từ thư mục "uploads"
+  app.useStaticAssets(join(__dirname, '..', 'uploads'), {
+    prefix: '/uploads',
+  });
 
   await app.listen(3000);
 }
