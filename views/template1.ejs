@@ -44,6 +44,15 @@
             border: 4px solid #BB0000; /* Viền đỏ đậm như giấy thư */
     border-radius: 15px;
         }
+        .video-container img {
+            max-width: 300px;
+            justify-self: center;
+            align-self: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            border: 4px solid #BB0000; /* Viền đỏ đậm như giấy thư */
+    border-radius: 15px;
+        }
 
         video {
             width: 80%;
@@ -250,7 +259,7 @@
                     Your browser does not support the video tag.
                 </video>
             <% }); %> -->
-            <% [mediaPath, mediaPath1, mediaPath2, mediaPath3].forEach(path => { %>
+            <% [mediaPath, mediaPath1, mediaPath2].forEach(path => { %>
                 <% if (path) { %>
                     <% if (path.endsWith('.mp4')) { %>
                         <video muted playsinline preload="none">
@@ -333,38 +342,45 @@
                             const specialText = document.getElementById("special-text");
                             specialText.style.display = "block";
     
-    //                         setTimeout(() => {
-    //                             specialText.style.display = "none";
-    
-    //                             // Hiển thị ảnh hieu1.jpg
-    //                             const specialImage = document.getElementById("special-image");
-    //                             specialImage.src = "/img/hieu1.jpg";
-    //                             specialImage.style.display = "block";
-    
-    //                             setTimeout(() => {
-    //                                 // Đổi sang ảnh hieu2.jpg
-    //                                 specialImage.src = "/img/hieu2.jpg";
-    //                                 setTimeout(() => {
-    //                                     specialImage.src = "/img/hieu3.jpg";
+                            setTimeout(() => {
+    specialText.style.display = "none";
 
-    //                                     // Hiển thị dòng chữ ngay sau khi đổi ảnh
-                                        setTimeout(() => {
-                                            specialImage.style.display = "none";
-                                            specialText.innerHTML = document.getElementById("special-text2");;
+    // Lấy danh sách ảnh từ EJS
+    const imagePaths = ["<%= mediaPath3 %>", "<%= mediaPath4 %>", "<%= mediaPath5 %>"];
+    let currentImageIndex = 0;
 
-                                            
-                                            specialText.style.display = "block";
-    specialText.style.visibility = "visible";
-    specialText.style.opacity = "1";
-    //                                         document.addEventListener("click", () => {
-    //     window.location.href = "https://www.facebook.com/messages/t/hieufall";
-    // });
-                                        }, 2000);
-    //                                 }, 2000);
+    // Hiển thị ảnh đầu tiên nếu có
+    const specialImage = document.getElementById("special-image");
+    if (imagePaths[0]) {
+        specialImage.src = imagePaths[currentImageIndex];
+        specialImage.style.display = "block";
+    }
 
+    // Hàm đổi ảnh tự động
+    const changeImage = () => {
+        currentImageIndex++;
+        if (currentImageIndex < imagePaths.length && imagePaths[currentImageIndex]) {
+            specialImage.src = imagePaths[currentImageIndex];
+            setTimeout(changeImage, 2000);
+        } else {
+            // Ẩn ảnh sau khi hiển thị đủ số ảnh
+            setTimeout(() => {
+                specialImage.style.display = "none";
+                const specialText2 = document.getElementById("special-text2");
+                specialText2.style.display = "block";
 
-    //                             }, 2000);
-    //                         }, 2500);
+                // Chuyển hướng khi click
+                document.addEventListener("click", () => {
+                    window.location.href = "https://www.facebook.com/messages/t/hieufall";
+                });
+            }, 2000);
+        }
+    };
+
+    // Bắt đầu đổi ảnh sau 2 giây
+    setTimeout(changeImage, 2000);
+}, 2500);
+
                         }
                         count--;
                     }, 1000);

@@ -18,6 +18,8 @@ export class WebsiteService {
     mediaPath1?: string;
     mediaPath2?: string;
     mediaPath3?: string;
+    mediaPath4?: string;
+    mediaPath5?: string;
   }) {
     const id = Date.now().toString();
     const templatePath = path.resolve(process.cwd(), 'views/template1.ejs');
@@ -40,6 +42,8 @@ export class WebsiteService {
       mediaPath1: content.mediaPath1 || '',
       mediaPath2: content.mediaPath2 || '',
       mediaPath3: content.mediaPath3 || '',
+      mediaPath4: content.mediaPath4 || '',
+      mediaPath5: content.mediaPath5 || '',
     });
 
     this.websites[id] = customizedPage;

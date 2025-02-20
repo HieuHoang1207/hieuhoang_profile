@@ -14,6 +14,8 @@ import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { extname } from 'path';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
+import { Request } from 'express';
+import { Multer } from 'multer';
 
 @Controller('website')
 export class WebsiteController {
@@ -32,6 +34,8 @@ export class WebsiteController {
         { name: 'media1', maxCount: 1 },
         { name: 'media2', maxCount: 1 },
         { name: 'media3', maxCount: 1 },
+        { name: 'media4', maxCount: 1 },
+        { name: 'media5', maxCount: 1 },
       ],
       {
         storage: diskStorage({
@@ -61,6 +65,8 @@ export class WebsiteController {
       media1?: Express.Multer.File[];
       media2?: Express.Multer.File[];
       media3?: Express.Multer.File[];
+      media4?: Express.Multer.File[];
+      media5?: Express.Multer.File[];
     },
     @Res() res: Response,
   ) {
@@ -76,6 +82,12 @@ export class WebsiteController {
     const mediaPath3 = files.media3?.[0]?.filename
       ? `/uploads/${files.media3[0].filename}`
       : '';
+    const mediaPath4 = files.media4?.[0]?.filename
+      ? `/uploads/${files.media4[0].filename}`
+      : '';
+    const mediaPath5 = files.media5?.[0]?.filename
+      ? `/uploads/${files.media5[0].filename}`
+      : '';
 
     const result = this.websiteService.createWebsite({
       ...content,
@@ -83,6 +95,8 @@ export class WebsiteController {
       mediaPath1,
       mediaPath2,
       mediaPath3,
+      mediaPath4,
+      mediaPath5,
     });
 
     res.redirect(`/website/${result.id}`);
