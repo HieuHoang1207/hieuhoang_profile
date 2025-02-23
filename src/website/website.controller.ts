@@ -101,6 +101,10 @@ export class WebsiteController {
 
     res.redirect(`/website/${result.id}`);
   }
+  @Get('template-form1')
+  getCreateWebsitePageForm(@Res() res: Response) {
+    res.render('template1-form');
+  }
 
   @Get(':id')
   getWebsite(@Param('id') id: string, @Res() res: Response) {
