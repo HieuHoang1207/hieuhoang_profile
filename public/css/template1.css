@@ -488,3 +488,90 @@ button:active {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  h1,
+  .overlay h2 {
+    font-size: 2.5rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .video-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+  }
+
+  .valentine-box {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .valentine-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bottom-left,
+  .bottom-right {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  #special-text,
+  #special-text2,
+  #countdown-timer {
+    font-size: 2rem;
+  }
+
+  #special-image {
+    width: 80%;
+    max-width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  h1,
+  .overlay h2 {
+    font-size: 2.5rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .video-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+  }
+
+  .valentine-box {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .valentine-footer {
+    text-align: center;
+  }
+
+  .bottom-left,
+  .bottom-right {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  #special-text,
+  #special-text2,
+  #countdown-timer {
+    font-size: 2rem;
+  }
+
+  #special-image {
+    width: 80%;
+    max-width: 250px;
+  }
+  .valentine-box {
+    max-width: 80%;
+    padding: 15px;
+  }
+}
