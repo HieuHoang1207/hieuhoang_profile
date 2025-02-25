@@ -22,7 +22,7 @@ export class TemplateService2 {
     mediaPath5?: string;
   }) {
     const id = Date.now().toString();
-    const templatePath = path.resolve(process.cwd(), 'views/template1.ejs');
+    const templatePath = path.resolve(process.cwd(), 'views/template2.ejs');
 
     if (!fs.existsSync(templatePath)) {
       throw new Error('Template file not found');

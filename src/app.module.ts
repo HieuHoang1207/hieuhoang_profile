@@ -4,9 +4,10 @@ import { GifController } from './gifcontroller'; // Đổi tên controller ở �
 import { SodaController } from './sodacontroller';
 import { AppService } from './app.service';
 import { WebsiteModule } from './website/website.module';
+import { TemplateModule2 } from './template2/template2.module';
 
 @Module({
-  imports: [WebsiteModule],
+  imports: [WebsiteModule, TemplateModule2],
   controllers: [AppController, GifController, SodaController], // Đảm bảo tên controller ở đây đúng
   providers: [AppService],
 })

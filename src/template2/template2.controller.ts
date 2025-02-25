@@ -21,11 +21,6 @@ import { Multer } from 'multer';
 export class TemplateController2 {
   constructor(private readonly websiteService: TemplateService2) {}
 
-  @Get('create2')
-  getCreateWebsitePage(@Res() res: Response) {
-    res.render('create-website');
-  }
-
   @Post('create2')
   @UseInterceptors(
     FileFieldsInterceptor(
@@ -99,11 +94,11 @@ export class TemplateController2 {
       mediaPath5,
     });
 
-    res.redirect(`/website/${result.id}`);
+    res.redirect(`/template/${result.id}`);
   }
-  @Get('template-form1')
+  @Get('create2')
   getCreateWebsitePageForm(@Res() res: Response) {
-    res.render('template1-form');
+    res.render('template2-form');
   }
 
   @Get(':id')

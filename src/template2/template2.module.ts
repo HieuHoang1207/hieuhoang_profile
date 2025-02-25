@@ -7,4 +7,4 @@ import { TemplateService2 } from './template2.service';
   controllers: [TemplateController2],
   providers: [TemplateService2],
 })
-export class WebsiteModule {}
+export class TemplateModule2 {}

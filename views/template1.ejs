@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Happy Valentine's Day</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant+Upright:wght@300;400;500;600;700&family=Dancing+Script&family=Luckiest+Guy&family=Playwrite+DE+SAS:wght@100..400&family=Send+Flowers&display=swap" rel="stylesheet">
     <style>
         body {
-            background: url("/img/background8.png") no-repeat center center/cover;
+            background: url("/img/background.png") no-repeat center center/cover;
             text-align: center;
             color: white;
             font-family: Arial, sans-serif;
@@ -41,7 +41,7 @@
             align-self: center;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-            border: 4px solid #3333FF; /* Viền đỏ đậm như giấy thư */
+            border: 4px solid #BB0000; /* Viền đỏ đậm như giấy thư */
     border-radius: 15px;
         }
         .video-container img {
@@ -50,7 +50,7 @@
             align-self: center;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-            border: 4px solid #3333FF; /* Viền đỏ đậm như giấy thư */
+            border: 4px solid #BB0000; /* Viền đỏ đậm như giấy thư */
     border-radius: 15px;
         }
 
@@ -67,7 +67,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url("/img/background9.png") no-repeat center center/cover;
+            background: url("/img/background1.png") no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -184,10 +184,10 @@
     display: none;
 }
 .valentine-box {
-    background: url("/img/background10.png") no-repeat center center/cover;
+    background: url("/img/background6.png") no-repeat center center/cover;
     width: 700px; /* Đặt giới hạn chiều rộng */
     padding: 20px;
-    border: 5px solid #3333FF; /* Viền đỏ đậm như giấy thư */
+    border: 5px solid #AA0000; /* Viền đỏ đậm như giấy thư */
     border-radius: 15px; /* Bo góc mềm mại */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Tạo độ nổi */
     text-align: center;
@@ -225,89 +225,6 @@
 .click-text {
     margin-bottom: 1.9rem;
 }
-#hearts-container {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.heart {
-    position: absolute;
-    bottom: -50px; /* Xuất phát từ ngoài màn hình */
-    font-size: 2rem;
-    color: red;
-    animation: floatUp 4s linear infinite;
-}
-
-@keyframes floatUp {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(-50vh) scale(1.2);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(-100vh) scale(0.8);
-        opacity: 0;
-    }
-}
-@media (max-width: 768px) {
-    h1, .overlay h2 {
-        font-size: 2.5rem;
-    }
-
-    .overlay p {
-        font-size: 1rem;
-    }
-
-    .video-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 5px;
-    }
-
-    .valentine-box {
-        max-width: 90%;
-        padding: 15px;
-    }
-
-    .valentine-footer {
-        text-align: center;
-    }
-
-    .bottom-left, .bottom-right {
-        font-size: 1rem;
-        padding: 5px;
-    }
-
-    #special-text, #special-text2, #countdown-timer {
-        font-size: 2rem;
-    }
-
-    #special-image {
-        width: 80%;
-        max-width: 250px;
-    }
-    .valentine-box {
-        max-width: 70%;
-        padding: 15px;
-    }
-    #countdown {
-    display: none;
-    width: 100px;
-    height: auto;
-    
-}
-.click-text {
-    margin-bottom: 1.3rem;
-}
-}
-
-
 
 
     </style>
@@ -332,11 +249,16 @@
     
 
     <!-- Nội dung chính -->
-     <div id="hearts-container">
-
     <div id="main-content">
         <h1><%= title %>❤️</h1>
         <div class="video-container">
+            <!-- <% const videos = ["soda1.mp4", "soda2.mp4", "soda3.mp4", "soda4.mp4", "soda5.mp4", "soda6.mp4"]; %>
+            <% videos.forEach(video => { %>
+                <video muted playsinline preload="none">
+                    <source src="/img/<%= video %>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            <% }); %> -->
             <% [mediaPath, mediaPath1, mediaPath2].forEach(path => { %>
                 <% if (path) { %>
                     <% if (path.endsWith('.mp4')) { %>
@@ -358,49 +280,11 @@
 
 
         <audio id="background-music" loop>
-            <source src="/img/New video.mp4" type="audio/mp4">
+            <source src="/img/sound.mp4" type="audio/mp4">
         </audio>
     </div>
-</div>
 
     <script>
-        function createHeart() {
-  const heart = document.createElement("img");
-  heart.classList.add("heart");
-  heart.src = "/img/birthday-6.gif"; // Đường dẫn đến ảnh của bạn
-
-  // Random vị trí ngang
-  heart.style.left = Math.random() * 100 + "vw";
-
-  // Random thời gian bay (3 - 6s)
-  const duration = Math.random() * 6 + 3;
-  heart.style.animationDuration = duration + "s";
-
-  // Random kích thước (30px - 60px)
-  const size = Math.random() * 120 + 60;
-  heart.style.width = size + "px";
-  heart.style.height = size + "px";
-
-  document.getElementById("hearts-container").appendChild(heart);
-
-  // Xóa trái tim sau khi bay hết màn hình
-  setTimeout(() => {
-    heart.remove();
-  }, duration * 1000);
-}
-
-// Bắt đầu hiệu ứng
-function startHearts() {
-  createHeart();
-  setTimeout(startHearts, Math.random() * 400 + 200); // 200-600ms
-}
-
-startHearts();
-
-
-
-  // Tạo trái tim mỗi 300ms
-  setInterval(createHeart, 300);
         function openFullscreen() {
             const elem = document.documentElement;
             if (elem.requestFullscreen) {
@@ -444,7 +328,7 @@ startHearts();
                     const countdownTimer = document.getElementById("countdown-timer");
                     countdownTimer.style.display = "block";
     
-                    let count = 5;
+                    let count = 10;
                     const countdownInterval = setInterval(() => {
                         countdownTimer.textContent = count;
                         if (count === 0) {
@@ -485,10 +369,10 @@ startHearts();
                 const specialText2 = document.getElementById("special-text2");
                 specialText2.style.display = "block";
 
-                // // Chuyển hướng khi click
-                // document.addEventListener("click", () => {
-                //     window.location.href = "https://www.facebook.com/messages/t/hieufall";
-                // });
+                // Chuyển hướng khi click
+                document.addEventListener("click", () => {
+                    window.location.href = "https://www.facebook.com/messages/t/hieufall";
+                });
             }, 2000);
         }
     };
